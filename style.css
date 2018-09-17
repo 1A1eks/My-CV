@@ -1,0 +1,66 @@
+.page {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 4fr 8fr 8fr 4fr;
+}
+.page > ul{
+    background: #eee;
+}
+#name {
+    
+    grid-row-start:2;
+    grid-column-start:2;
+    grid-column-end:4;
+    grid-row-end:3;
+    text-align: center;
+    justify-content: center;
+}
+
+#pic {
+    
+    grid-row-start:2;
+    grid-column-start:1;
+    
+    grid-row-end:3;
+    grid-column-end:2;
+}
+
+#profile {
+    grid-row-start:3;
+    grid-column-start:1;
+}
+
+#experience {
+    grid-row-start:4;
+    grid-column-start:1;
+}
+
+#interests {
+    grid-row-start:4;
+    grid-column-start:2;
+}
+
+#skills {
+    grid-row-start:3;
+    grid-column-start:3;
+}
+
+#references {
+    grid-row-start:4;
+    grid-column-start:3;
+}
+
+#education {
+    grid-row-start:3;
+    grid-column-start:2;
+}
+
+#contacts {
+    
+    grid-row-start:5;
+    grid-column-start:1;
+    grid-column-end:4;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
