@@ -27,15 +27,12 @@ body {
     grid-column-end:2;
 }
 
-
-
 /* Rest of the Page
 Layout of the grid first, 
 then changing borders and stuff beneath to avoid repetition.
 */
 
-.page > ul {
-    
+.page > ul {    
     background: #eee;
     border-top, border-bottom:4px;
     border-right, border-left: none;
@@ -73,8 +70,7 @@ then changing borders and stuff beneath to avoid repetition.
     grid-column-start:3;
 }
 
-#Profile, #experience { 
-    
+#Profile, #experience {     
     border-right: none;  
     -moz-border-radius-bottomleft: 12px;
     -webkit-border-bottom-left-radius: 12px;    
@@ -95,8 +91,19 @@ then changing borders and stuff beneath to avoid repetition.
     -webkit-border-top-right-radius: 12px;
 }
 
+h2 {
+    text-align: center;
+    margin-right: 15%;
+}
 
+/*hover animation*/
+#Profile:hover ul {
+    background-color: #ddd;
+}
 
+#Profile:hover #Profile {
+    background-color: #eee;
+}
 
 
 
