@@ -1,13 +1,17 @@
+/*Page layout*/
+body {
+    margin:2%;
+    margin-top: none;
+}
+
 .page {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 4fr 8fr 8fr 4fr;
+    grid-template-rows: 1fr 4fr 8fr 8fr .5fr;
 }
-.page > ul{
-    background: #eee;
-}
-#name {
-    
+
+/* "Header" or head section */
+#name {    
     grid-row-start:2;
     grid-column-start:2;
     grid-column-end:4;
@@ -16,13 +20,27 @@
     justify-content: center;
 }
 
-#pic {
-    
+#pic {    
     grid-row-start:2;
-    grid-column-start:1;
-    
+    grid-column-start:1;    
     grid-row-end:3;
     grid-column-end:2;
+}
+
+
+
+/* Rest of the Page
+Layout of the grid first, 
+then changing borders and stuff beneath to avoid repetition.
+*/
+
+.page > ul {
+    
+    background: #eee;
+    border-top, border-bottom:4px;
+    border-right, border-left: none;
+    border-color: #ddd;
+    border-style: solid;
 }
 
 #profile {
@@ -30,9 +48,9 @@
     grid-column-start:1;
 }
 
-#experience {
-    grid-row-start:4;
-    grid-column-start:1;
+#education {
+    grid-row-start:3;
+    grid-column-start:2;
 }
 
 #interests {
@@ -45,15 +63,44 @@
     grid-column-start:3;
 }
 
+#experience {
+    grid-row-start:4;
+    grid-column-start:1;
+}
+
 #references {
     grid-row-start:4;
     grid-column-start:3;
 }
 
-#education {
-    grid-row-start:3;
-    grid-column-start:2;
+#Profile, #experience { 
+    
+    border-right: none;  
+    -moz-border-radius-bottomleft: 12px;
+    -webkit-border-bottom-left-radius: 12px;    
+    -moz-border-radius-topleft: 12px;
+    -webkit-border-top-left-radius: 12px;
 }
+
+#education, #interests {      
+   border-left: 2px dashed  	white;
+    border-right: 2px dashed  	white;
+}
+
+#skills, #references {
+    border-left: none;
+    -moz-border-radius-bottomright: 12px;
+    -webkit-border-bottom-right-radius: 12px;    
+    -moz-border-radius-topright: 12px;
+    -webkit-border-top-right-radius: 12px;
+}
+
+
+
+
+
+
+/*  stuff for footer ... ?
 
 #contacts {
     
